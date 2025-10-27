@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>label INI — Launching Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accentA: #ff4e50;
+      --accentB: #f9d423;
+      --accentC: #24c6dc;
+      --accentD: #5433ff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;width:100%;}
+    body{
+      font-family:'Nunito',sans-serif;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      overflow:hidden;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      position:relative;
+      color:#1a1a1a;
+    }
+
+    /* subtle abstract floating glows */
+    body::before, body::after{
+      content:'';
+      position:absolute;
+      border-radius:50%;
+      filter: blur(100px);
+      opacity:0.45;
+      z-index:0;
+      animation: float 12s ease-in-out infinite alternate;
+    }
+    /* body::before{
+      width:480px;height:480px;
+      background: radial-gradient(circle at center, var(--accentA), transparent 70%);
+      top:-100px;left:-100px;
+      animation-delay:0s;
+    }
+    body::after{
+      width:600px;height:600px;
+      background: radial-gradient(circle at center, var(--accentC), transparent 70%);
+      bottom:-150px;right:-150px;
+      animation-delay:2s;
+    }
+    @keyframes float {
+      from{transform:translateY(0) rotate(0deg);} to{transform:translateY(-60px) rotate(10deg);}
+    } */
+
+    .brand{
+      position:relative;
+      z-index:1;
+      font-weight:800;
+      font-size: clamp(48px, 12vw, 120px);
+      letter-spacing:2px;
+      text-transform:none;
+      background: linear-gradient(90deg, #000000, #281e5d, #000000);
+      background-size: 200% 200%;
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      text-align:center;
+      animation: shimmer 6s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .brand-underline{
+      height:4px;
+      width:55%;
+      margin:18px auto 0;
+      border-radius:999px;
+      background: linear-gradient(90deg, #ff9966, #ff5e62);
+      position:relative;
+      z-index:1;
+    }
+
+    .coming{
+      margin-top:50px;
+      font-size: clamp(14px, 3vw, 22px);
+      color:#fff;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-weight:600;
+      z-index:1;
+      position:relative;
+    }
+
+    .contact{
+      margin-top:25px;
+      font-size: clamp(14px, 3vw, 15px);
+      color:#333;
+      letter-spacing:2px;
+      font-weight:600;
+      z-index:1;
+      position:relative;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="brand">INI</h1>
+  <div class="brand-underline"></div>
+  <div class="coming">launching soon</div>
+  <div class="contact">harshini@labelini.in</div>
+</body>
+</html>
